@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:alpha="0"
         android:text="@string/sign_in"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
