@@ -5,27 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="32dp"
-    tools:context=".ui.user.LoginActivity">
+    tools:context=".ui.user.SignUpActivity">
 
     <TextView
         android:id="@+id/tv_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="1"
-        android:text="@string/sign_in"
+        android:text="@string/sign_up"
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/emailContainer"
+        app:layout_constraintStart_toStartOf="@id/nameContainer"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailContainer"
+        android:id="@+id/nameContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginHorizontal="20dp"
-
         app:helperTextTextColor="@android:color/holo_red_dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,6 +37,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_app_name"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/name_hint"
+            android:inputType="text"
+            android:lines="1"
+            android:textColorHint="#757575" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+
+        app:helperTextTextColor="@android:color/holo_red_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameContainer"
         app:startIconDrawable="@drawable/ic_baseline_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -79,59 +107,58 @@
             android:lines="0"
             android:maxLength="16"
             android:textColorHint="#757575" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tv_continue"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordConfirmContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginHorizontal="20dp"
+        app:helperTextTextColor="@android:color/holo_red_dark"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:alpha="1"
-        android:text="@string/continue_with"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:boxCornerRadiusTopStart="20dp"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordContainer"
-        app:layout_constraintVertical_bias="0.0" />
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_login_google"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:alpha="1"
-        app:backgroundTint="@color/google"
-        android:text="@string/login_google"
-        android:textColor="@color/white"
-        app:cornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_continue"
-        app:layout_constraintVertical_bias="0.035" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordConfirmEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/password_confirm_hint"
+            android:inputType="textPassword"
+            android:lines="0"
+            android:maxLength="16"
+            android:textColorHint="#757575" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login_fb"
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:alpha="1"
-        app:backgroundTint="@color/facebook"
         android:text="@string/login_fb"
         android:textColor="@color/white"
+        app:backgroundTint="@color/facebook"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login_google"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_signup"
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:alpha="1"
-        android:text="@string/sign_in"
+        android:text="@string/sign_up"
         android:textColor="#5D4037"
         android:textSize="15sp"
         app:cornerRadius="20dp"
@@ -143,24 +170,24 @@
         android:id="@+id/tv_no_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:alpha="1"
-        android:text="@string/no_account"
+        android:text="@string/have_account"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login_fb"
+        app:layout_constraintTop_toBottomOf="@id/passwordConfirmContainer"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tv_signup"
+        android:id="@+id/tv_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="30dp"
         android:alpha="1"
-        android:text="@string/register"
+        android:text="@string/login"
         android:textColor="@color/blue_700"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -168,7 +195,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/tv_no_acc"
-        app:layout_constraintTop_toBottomOf="@id/btn_login_fb"
+        app:layout_constraintTop_toBottomOf="@id/passwordConfirmContainer"
         app:layout_constraintVertical_bias="0.004" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
