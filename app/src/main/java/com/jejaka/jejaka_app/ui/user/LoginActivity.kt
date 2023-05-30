@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.load.engine.Resource
+import com.jejaka.jejaka_app.MainActivity
 import com.jejaka.jejaka_app.R
 import com.jejaka.jejaka_app.databinding.ActivityLoginBinding
 
@@ -41,7 +42,9 @@ class LoginActivity : AppCompatActivity() {
         val validPassword = binding.passwordContainer.helperText == null
 
         if (validEmail && validPassword)
-            resetForm()
+            startActivity(
+                Intent(
+                    this, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         else
             invalidForm()
     }
