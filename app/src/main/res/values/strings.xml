@@ -5,10 +5,14 @@
 
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="name_hint">Enter name</string>
     <string name="email_hint">Enter e-mail address</string>
     <string name="password_hint">Enter password</string>
+    <string name="password_confirm_hint">Confirm password</string>
 
     <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_out">Sign Out</string>
     <string name="login">Login</string>
     <string name="continue_with">Or Continue With</string>
     <string name="login_google">Login With Google</string>
@@ -19,6 +23,7 @@
 
     <string name="input_invalid">Input Invalid</string>
     <string name="no_account">Doesn\'t have account yet?</string>
+    <string name="have_account">Already have Account?</string>
 
 
     <string name="desc_icon">Jejaka App\'s Icon Logo</string>
