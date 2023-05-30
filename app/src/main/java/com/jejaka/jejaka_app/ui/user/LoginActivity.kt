@@ -143,13 +143,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setAnimation() {
-        val appIcon = ObjectAnimator.ofFloat(binding.icon, View.ALPHA, 1f).setDuration(700)
         val appName = ObjectAnimator.ofFloat(binding.tvAppName, View.ALPHA, 1f).setDuration(700)
         val tvEmail = ObjectAnimator.ofFloat(binding.emailContainer, View.ALPHA, 1f).setDuration(700)
-//        val etEmail = ObjectAnimator.ofFloat(binding.edLoginEmail, View.ALPHA, 1f).setDuration(700)
         val tvPassword = ObjectAnimator.ofFloat(binding.passwordContainer, View.ALPHA, 1f).setDuration(700)
-//        val etPass = ObjectAnimator.ofFloat(binding.edLoginPassword, View.ALPHA, 1f).setDuration(700)
+
         val btnLogin = ObjectAnimator.ofFloat(binding.btnLogin, View.ALPHA, 1f).setDuration(700)
+        val btnGoogle = ObjectAnimator.ofFloat(binding.btnLoginGoogle, View.ALPHA, 1f).setDuration(700)
+        val btnFacebook = ObjectAnimator.ofFloat(binding.btnLoginFb, View.ALPHA, 1f).setDuration(700)
+        val txtContinue = ObjectAnimator.ofFloat(binding.tvContinue, View.ALPHA, 1f).setDuration(700)
         val txtHaveAcc = ObjectAnimator.ofFloat(binding.tvNoAcc, View.ALPHA, 1f).setDuration(700)
         val txtSignup = ObjectAnimator.ofFloat(binding.tvSignup, View.ALPHA, 1f).setDuration(700)
 
@@ -158,12 +159,11 @@ class LoginActivity : AppCompatActivity() {
         }
 
         val buttonAnimation = AnimatorSet().apply {
-            playTogether(btnLogin, txtHaveAcc, txtSignup,)
+            playTogether(btnLogin, txtHaveAcc, txtSignup,btnGoogle,btnFacebook,txtSignup)
         }
 
         AnimatorSet().apply {
             playSequentially(
-                appIcon,
                 appName,
                 emailAnimation,
                 buttonAnimation
