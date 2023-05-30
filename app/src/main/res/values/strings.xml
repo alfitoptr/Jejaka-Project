@@ -1,14 +1,25 @@
 <resources>
-    <string name="app_name">JeJaKa</string>
+    <string name="app_name">JEJAKa</string>
+    <string name="app_name2">Jelajah Ke Indonesia</string>
     <string name="name">Name</string>
+
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="email_hint">Enter e-mail address</string>
+    <string name="password_hint">Enter password</string>
+
+    <string name="sign_in">Sign In</string>
     <string name="login">Login</string>
-    <string name="register">Register</string>
+    <string name="continue_with">Or Continue With</string>
+    <string name="login_google">Login With Google</string>
+    <string name="login_fb">Login With Facebook</string>
+
+    <string name="register">Create Here</string>
     <string name="required">Required</string>
 
     <string name="input_invalid">Input Invalid</string>
-    <string name="no_account">Don\'t have account yet?</string>
+    <string name="no_account">Doesn\'t have account yet?</string>
+
 
     <string name="desc_icon">Jejaka App\'s Icon Logo</string>
 
