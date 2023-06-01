@@ -1,42 +1,59 @@
 package com.jejaka.jejaka_app.ui.maps
 
+import android.content.pm.PackageManager
+import androidx.fragment.app.Fragment
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.jejaka.jejaka_app.databinding.FragmentMapsBinding
-import com.jejaka.jejaka_app.ui.home.MapsViewModel
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
+
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import com.jejaka.jejaka_app.R
 
 class MapsFragment : Fragment() {
 
-    private var _binding: FragmentMapsBinding? = null
-    // This property is only valid between onCreateView and onDestroyView.
-    private val binding get() = _binding!!
+    private val callback = OnMapReadyCallback { googleMap ->
+        /**
+         * Manipulates the map once available.
+         * This callback is triggered when the map is ready to be used.
+         * This is where we can add markers or lines, add listeners or move the camera.
+         * In this case, we just add a marker near Sydney, Australia.
+         * If Google Play services is not installed on the device, the user will be prompted to
+         * install it inside the SupportMapFragment. This method will only be triggered once the
+         * user has installed Google Play services and returned to the app.
+         */
+        /*val sydney = LatLng(-34.0, 151.0)
+        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))*/
+
+        val dicodingSpace = LatLng(-6.8957643, 107.6338462)
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(dicodingSpace)
+                .title("Dicoding Space")
+                .snippet("Batik Kumeli No.50")
+        )
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dicodingSpace, 15f))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val mapsViewModel =
-            ViewModelProvider(this).get(MapsViewModel::class.java)
-
-        _binding = FragmentMapsBinding.inflate(inflater, container, false)
-
-        val root: View = binding.root
-        val textView: TextView = binding.tvMaps
-
-        mapsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+    ): View? {
+        return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        mapFragment?.getMapAsync(callback)
     }
 }

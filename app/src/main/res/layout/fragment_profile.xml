@@ -10,7 +10,7 @@
         android:id="@+id/tv_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:text="@string/profile"
@@ -28,7 +28,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintStart_toStartOf="@id/tv_profile"
         app:layout_constraintTop_toBottomOf="@id/tv_profile">
 
@@ -47,10 +48,11 @@
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             android:src="@drawable/ic_baseline_edit_24"
-            android:backgroundTint="@color/yellow"
             tools:ignore="SpeakableTextPresentCheck"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            app:tint="@color/blue_500"/>
     </LinearLayout>
 
     <LinearLayout
@@ -152,14 +154,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_phone"
-            app:startIconDrawable="@drawable/ic_phone">
+            app:startIconDrawable="@drawable/ic_baseline_phone_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phoneEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/phone_dummy"
-                android:inputType="textEmailAddress"
+                android:inputType="phone"
                 android:lines="1"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -193,7 +195,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             app:backgroundTint="@color/gray"
             app:cornerRadius="10dp"
-            app:icon="@drawable/ic_logout"
+            app:icon="@drawable/ic_baseline_logout_24"
             app:iconTint="@color/black"
             app:iconPadding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
