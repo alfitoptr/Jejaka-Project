@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
-        app:itemBackground="@color/white"
         app:itemIconTint="@color/blue_700"
         app:itemTextColor="@color/blue_700"
         app:layout_constraintStart_toStartOf="parent"
