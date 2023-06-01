@@ -8,7 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.jejaka.jejaka_app.ui.user.LoginActivity
+import com.jejaka.jejaka_app.ui.auth_page.AuthActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,7 @@ class SplashScreenActivity : AppCompatActivity() {
         }
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, AuthActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)

@@ -11,17 +11,11 @@ import androidx.appcompat.app.AlertDialog
 import com.jejaka.jejaka_app.MainActivity
 import com.jejaka.jejaka_app.R
 import com.jejaka.jejaka_app.databinding.FragmentSignInBinding
-import com.jejaka.jejaka_app.ui.user.SignUpActivity
 
 class SignInFragment : Fragment() {
 
     private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        activity?.actionBar?.hide()
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -148,9 +142,17 @@ class SignInFragment : Fragment() {
     private fun setupAction() {
 
         binding.tvSignup.setOnClickListener{
-            startActivity(
-                Intent(
-                    activity, SignUpActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+            val signUpFragment = SignUpFragment()
+            val fragmentManager = parentFragmentManager
+            fragmentManager.beginTransaction().apply {
+                replace(
+                    R.id.auth_frame_container,
+                    signUpFragment,
+                    SignUpFragment::class.java.simpleName
+                )
+                addToBackStack(null)
+                commit()
+            }
         }
     }
 
