@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">JEJAKa</string>
     <string name="app_name2">Jelajah Ke Indonesia</string>
+
+    <string name="activity_detail_place">Detail Place Activity</string>
+
     <string name="name">Name</string>
 
     <string name="email">Email</string>
@@ -33,8 +36,10 @@
     <string name="search">Search</string>
     <string name="maps">Maps</string>
     <string name="profile">Profile</string>
+    <string name="address">Address</string>
 
     <string name="search_hint">Search...</string>
+    <string name="search_map">Search Location...</string>
 
     <string name="register">Create Here</string>
     <string name="required">Required</string>
