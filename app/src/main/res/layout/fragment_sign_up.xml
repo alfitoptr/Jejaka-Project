@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="32dp"
-    tools:context=".ui.user.SignUpActivity">
+    tools:context=".ui.auth_page.SignUpFragment">
 
     <TextView
         android:id="@+id/tv_app_name"

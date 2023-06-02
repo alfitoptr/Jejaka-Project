@@ -1,23 +1,31 @@
-package com.jejaka.jejaka_app.ui.user
+package com.jejaka.jejaka_app.ui.auth_page
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
-import com.jejaka.jejaka_app.MainActivity
 import com.jejaka.jejaka_app.R
-import com.jejaka.jejaka_app.databinding.ActivitySignUpBinding
+import com.jejaka.jejaka_app.databinding.FragmentSignUpBinding
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpFragment : Fragment() {
 
-    private lateinit var binding : ActivitySignUpBinding
+    private var _binding: FragmentSignUpBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding= ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        supportActionBar?.hide()
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        _binding = FragmentSignUpBinding.inflate(inflater, container,false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         setupAction()
         emailFocusListener()
@@ -38,12 +46,12 @@ class SignUpActivity : AppCompatActivity() {
         val validPassword = binding.passwordContainer.helperText == null
         val validPasswordConfirm = binding.passwordConfirmContainer.helperText == null
 
-        if (validEmail && validPassword && validPasswordConfirm)
-            startActivity(
-                Intent(
-                    this, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
-        else
+        if (validEmail && validPassword && validPasswordConfirm) {
+            val fragmentManager = parentFragmentManager
+            fragmentManager.popBackStack()
+        } else {
             invalidForm()
+        }
     }
 
     private fun invalidForm()
@@ -58,7 +66,7 @@ class SignUpActivity : AppCompatActivity() {
         if(binding.passwordConfirmContainer.helperText != null)
             message += "\nPassword: " + binding.passwordConfirmContainer.helperText
 
-        AlertDialog.Builder(this)
+        AlertDialog.Builder(requireContext())
             .setTitle("Invalid Form")
             .setMessage(message)
             .setPositiveButton("Okay"){ _,_ ->
@@ -72,7 +80,7 @@ class SignUpActivity : AppCompatActivity() {
         var message = "Name: " + binding.nameEditText.text
         message += "\nEmail: " + binding.emailEditText.text
         message += "\nPassword: " + binding.passwordEditText.text
-        AlertDialog.Builder(this)
+        AlertDialog.Builder(requireContext())
             .setTitle("Form submitted")
             .setMessage(message)
             .setPositiveButton("Okay"){ _,_ ->
@@ -165,9 +173,12 @@ class SignUpActivity : AppCompatActivity() {
     private fun setupAction() {
 
         binding.tvLogin.setOnClickListener{
-            startActivity(
-                Intent(
-                    this, LoginActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+            val fragmentManager = parentFragmentManager
+            fragmentManager.popBackStack()
         }
+    }
+
+    companion object {
+
     }
 }
