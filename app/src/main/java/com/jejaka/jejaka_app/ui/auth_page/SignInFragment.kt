@@ -33,7 +33,11 @@ class SignInFragment : Fragment() {
         emailFocusListener()
         passwordFocusListener()
 
-        binding.btnLogin.setOnClickListener { submitForm() }
+        binding.btnLogin.setOnClickListener {
+            startActivity(
+                Intent(
+                    activity, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        }
     }
 
     private fun submitForm()
