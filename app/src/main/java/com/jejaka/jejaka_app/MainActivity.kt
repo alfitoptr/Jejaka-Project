@@ -2,14 +2,12 @@ package com.jejaka.jejaka_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jejaka.jejaka_app.databinding.ActivityMainBinding
-import com.jejaka.jejaka_app.ui.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 

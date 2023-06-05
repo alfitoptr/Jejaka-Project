@@ -14,5 +14,15 @@ class DetailPlaceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityDetailPlaceBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.hide()
+
+        val fragmentManager = supportFragmentManager
+        val detailPlaceFragment = DetailPlaceFragment()
+
+        fragmentManager
+            .beginTransaction()
+            .add(R.id.fragment_container, detailPlaceFragment, DetailPlaceFragment::class.java.simpleName)
+            .commit()
     }
 }

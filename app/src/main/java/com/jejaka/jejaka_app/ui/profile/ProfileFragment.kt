@@ -1,5 +1,6 @@
 package com.jejaka.jejaka_app.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +9,10 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
+import com.jejaka.jejaka_app.MainActivity
 import com.jejaka.jejaka_app.databinding.FragmentProfileBinding
+import com.jejaka.jejaka_app.ui.auth_page.AuthActivity
+import com.jejaka.jejaka_app.ui.detail_place.DetailPlaceActivity
 
 class ProfileFragment : Fragment() {
 
@@ -32,6 +36,14 @@ class ProfileFragment : Fragment() {
         profileViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        binding.btnHelp.setOnClickListener {
+            startActivity(
+                Intent(
+                    activity, DetailPlaceActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        }
+
+
         return root
     }
 

@@ -14,7 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:text="@string/profile"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,15 +38,15 @@
             android:layout_width="315dp"
             android:layout_height="wrap_content"
             android:text="@string/name_dummy"
-            android:textSize="35sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imageButton" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:src="@drawable/ic_baseline_edit_24"
@@ -77,11 +77,11 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             app:helperTextTextColor="@android:color/holo_red_dark"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxCornerRadiusTopStart="20dp"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            app:boxCornerRadiusTopEnd="20dp"
+            android:layout_height="50dp"
+            app:boxCornerRadiusTopStart="25dp"
+            app:boxCornerRadiusBottomEnd="25dp"
+            app:boxCornerRadiusBottomStart="25dp"
+            app:boxCornerRadiusTopEnd="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_email"
@@ -95,7 +95,7 @@
                 android:inputType="textEmailAddress"
                 android:lines="1"
                 android:textColorHint="#757575"
-                android:textSize="20sp"/>
+                android:textSize="18sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -111,11 +111,11 @@
             android:id="@+id/passwordContainer"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxCornerRadiusTopStart="20dp"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            app:boxCornerRadiusTopEnd="20dp"
+            android:layout_height="50dp"
+            app:boxCornerRadiusTopStart="25dp"
+            app:boxCornerRadiusBottomEnd="25dp"
+            app:boxCornerRadiusBottomStart="25dp"
+            app:boxCornerRadiusTopEnd="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_password"
@@ -129,7 +129,7 @@
                 android:inputType="textPassword"
                 android:lines="0"
                 android:textColorHint="#757575"
-                android:textSize="20sp"/>
+                android:textSize="18sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -146,11 +146,11 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             app:helperTextTextColor="@android:color/holo_red_dark"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxCornerRadiusTopStart="20dp"
-            app:boxCornerRadiusBottomEnd="20dp"
-            app:boxCornerRadiusBottomStart="20dp"
-            app:boxCornerRadiusTopEnd="20dp"
+            android:layout_height="50dp"
+            app:boxCornerRadiusTopStart="25dp"
+            app:boxCornerRadiusBottomEnd="25dp"
+            app:boxCornerRadiusBottomStart="25dp"
+            app:boxCornerRadiusTopEnd="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_phone"
@@ -163,7 +163,7 @@
                 android:hint="@string/phone_dummy"
                 android:inputType="phone"
                 android:lines="1"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView

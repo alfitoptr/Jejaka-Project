@@ -63,5 +63,20 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+    <string name="star">4.5</string>
+    <string name="number_of_reviews">(100 Reviews)</string>
+    <string name="see_reviews">See reviews</string>
+    <string name="more_info">More Info</string>
+    <string name="view_map">View Map</string>
+    <string name="about_place">About Place</string>
+    <string name="category">Category</string>
+    <string name="culture">Culture</string>
+    <string name="detail_culture">Traditional food, language &amp; more</string>
+    <string name="emergency">Emergency</string>
+    <string name="detail_emergency">All local emergency contact</string>
+    <string name="add_review">Add Review</string>
+    <string name="reviews">Reviews</string>
+    <string name="no_review">No review</string>
 
 </resources>
