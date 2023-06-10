@@ -15,6 +15,8 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
 
+    private val hello = "Hello, "
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,13 +27,11 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        val root: View = binding.root
-        val textView: TextView = binding.tvName
 
         homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+            binding.tvName.text = hello + it
         }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
