@@ -29,6 +29,7 @@
         android:text="@string/dummy_text"
         android:textSize="16sp"
         android:textStyle="normal"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace"
         tools:layout_editor_absoluteX="15dp" />
 

@@ -76,5 +76,13 @@
     <string name="add_review">Add Review</string>
     <string name="reviews">Reviews</string>
     <string name="no_review">No review</string>
+    <string name="hospital">Hospital / Ambulance</string>
+    <string name="police">Police</string>
+    <string name="fire_dept">Fire Dept.</string>
+    <string name="hotel">Hotel</string>
+    <string name="airport">Airport</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="rail_station">Rail Station</string>
+    <string name="weather">Weather</string>
 
 </resources>
