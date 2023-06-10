@@ -4,33 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
     tools:context=".ui.profile.ProfileFragment">
 
     <TextView
         android:id="@+id/tv_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:text="@string/profile"
+        android:textColor="?android:textColorPrimary"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linear_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintStart_toStartOf="@id/tv_profile"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_profile">
 
         <TextView
@@ -38,6 +38,7 @@
             android:layout_width="315dp"
             android:layout_height="wrap_content"
             android:text="@string/name_dummy"
+            android:textColor="?android:textColorPrimary"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -49,13 +50,14 @@
             android:layout_height="30dp"
             android:layout_weight="1"
             android:background="#00FFFFFF"
-            android:src="@drawable/ic_baseline_edit_24"
-            tools:ignore="SpeakableTextPresentCheck"
             android:contentDescription="TODO"
-            app:tint="@color/blue_500"/>
+            android:src="@drawable/ic_baseline_edit_24"
+            app:tint="@color/blue_500"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linear_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -69,8 +71,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email_address"
-            android:textSize="15sp">
-        </TextView>
+            android:textSize="15sp"
+            android:textColor="?android:textColorPrimary"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailContainer"
@@ -82,6 +84,10 @@
             app:boxCornerRadiusBottomEnd="25dp"
             app:boxCornerRadiusBottomStart="25dp"
             app:boxCornerRadiusTopEnd="25dp"
+            app:counterTextColor="?android:textColorPrimary"
+            app:boxStrokeColor="?android:textColorPrimary"
+            app:hintTextColor="?android:textColorPrimary"
+            android:textColorHint="?android:textColorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_email"
@@ -95,7 +101,8 @@
                 android:inputType="textEmailAddress"
                 android:lines="1"
                 android:textColorHint="#757575"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:textColor="?android:textColorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -104,7 +111,8 @@
             android:layout_height="wrap_content"
             android:text="@string/password"
             android:textSize="15sp"
-            android:layout_marginTop="10dp">
+            android:textColor="?android:textColorPrimary"
+            android:layout_marginTop="20dp">
         </TextView>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -116,6 +124,10 @@
             app:boxCornerRadiusBottomEnd="25dp"
             app:boxCornerRadiusBottomStart="25dp"
             app:boxCornerRadiusTopEnd="25dp"
+            app:counterTextColor="?android:textColorPrimary"
+            app:boxStrokeColor="?android:textColorPrimary"
+            app:hintTextColor="?android:textColorPrimary"
+            android:textColorHint="?android:textColorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_password"
@@ -129,7 +141,8 @@
                 android:inputType="textPassword"
                 android:lines="0"
                 android:textColorHint="#757575"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:textColor="?android:textColorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -138,7 +151,8 @@
             android:layout_height="wrap_content"
             android:text="@string/phone"
             android:textSize="15sp"
-            android:layout_marginTop="10dp">
+            android:textColor="?android:textColorPrimary"
+            android:layout_marginTop="20dp">
         </TextView>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -151,6 +165,10 @@
             app:boxCornerRadiusBottomEnd="25dp"
             app:boxCornerRadiusBottomStart="25dp"
             app:boxCornerRadiusTopEnd="25dp"
+            app:counterTextColor="?android:textColorPrimary"
+            app:boxStrokeColor="?android:textColorPrimary"
+            app:hintTextColor="?android:textColorPrimary"
+            android:textColorHint="?android:textColorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_phone"
@@ -163,75 +181,48 @@
                 android:hint="@string/phone_dummy"
                 android:inputType="phone"
                 android:lines="1"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="?android:textColorPrimary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tv_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/address"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp">
-        </TextView>
-
-        <com.jejaka.jejaka_app.ui.customview.EditText
-            android:id="@+id/my_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginTop="10dp"
-            android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-
-        <com.jejaka.jejaka_app.ui.profile.Btn_EditProfile
-            android:id="@+id/my_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/my_edit_text" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_help"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="@string/help"
-            android:layout_marginTop="50dp"
-            android:textColor="@color/black"
-            android:textAlignment="textStart"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            app:backgroundTint="@color/gray"
-            app:cornerRadius="10dp"
-            app:icon="@drawable/ic_baseline_help_outline_24"
-            app:iconTint="@color/black"
-            app:iconPadding="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/my_edit_text" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_logout"
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="@string/sign_out"
-            android:textColor="@color/black"
-            android:textAlignment="textStart"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            app:backgroundTint="@color/gray"
-            app:cornerRadius="10dp"
-            app:icon="@drawable/ic_baseline_logout_24"
-            app:iconTint="@color/black"
-            app:iconPadding="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/phoneContainer" />
-
     </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_help"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="@string/help"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textAlignment="textStart"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:backgroundTint="@color/gray"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_baseline_help_outline_24"
+        app:iconTint="@color/black"
+        app:iconPadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_profile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="@string/sign_out"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:backgroundTint="@color/gray"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_baseline_logout_24"
+        app:iconPadding="20dp"
+        app:iconTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btn_help" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

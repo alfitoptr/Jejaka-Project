@@ -29,6 +29,7 @@
         android:text="@string/dummy_text"
         android:textSize="16sp"
         android:textStyle="normal"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace"
         tools:layout_editor_absoluteX="15dp" />
 
@@ -40,11 +41,12 @@
         android:text="@string/category"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:layout_editor_absoluteX="15dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/btnCulture"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
@@ -81,6 +83,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/detail_culture"
             android:textSize="16sp"
+            android:textColor="?android:textColorPrimary"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -97,20 +100,20 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/btnEmergency"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/btnCulture">
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
-            android:src="@drawable/ic_emergency"
+            android:src="@drawable/emergency"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -134,6 +137,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/detail_emergency"
             android:textSize="16sp"
+            android:textColor="?android:textColorPrimary"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -161,7 +165,7 @@
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEmergency" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
-import com.jejaka.jejaka_app.ui.auth_page.AuthActivity
+import com.jejaka.jejaka_app.ui.auth.AuthActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

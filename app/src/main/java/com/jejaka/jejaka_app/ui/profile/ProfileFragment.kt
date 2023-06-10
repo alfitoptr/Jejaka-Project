@@ -6,12 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
-import com.jejaka.jejaka_app.MainActivity
 import com.jejaka.jejaka_app.databinding.FragmentProfileBinding
-import com.jejaka.jejaka_app.ui.auth_page.AuthActivity
+import com.jejaka.jejaka_app.ui.auth.AuthActivity
 import com.jejaka.jejaka_app.ui.detail_place.DetailPlaceActivity
 
 class ProfileFragment : Fragment() {
@@ -41,6 +39,15 @@ class ProfileFragment : Fragment() {
             startActivity(
                 Intent(
                     activity, DetailPlaceActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        }
+
+        binding.btnLogout.setOnClickListener {
+            startActivity(
+                Intent(
+                    activity, AuthActivity::class.java
+                )
+            )
+            activity?.finish()
         }
 
 

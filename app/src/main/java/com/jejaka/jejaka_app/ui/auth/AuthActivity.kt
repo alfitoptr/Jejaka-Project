@@ -1,4 +1,4 @@
-package com.jejaka.jejaka_app.ui.auth_page
+package com.jejaka.jejaka_app.ui.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -27,14 +27,35 @@ class DetailPlaceFragment : Fragment() {
 
         val fragmentManager = parentFragmentManager
 
-        binding.btnMoreInfo.setOnClickListener {
-            val aboutPlaceFragment = AboutPlaceFragment()
-            fragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, aboutPlaceFragment, AboutPlaceFragment::class.java.simpleName)
-                addToBackStack(null)
-                commit()
+        binding.apply {
+            btnMoreInfo.setOnClickListener {
+                val aboutPlaceFragment = AboutPlaceFragment()
+                fragmentManager.beginTransaction().apply {
+                    replace(
+                        R.id.fragment_container,
+                        aboutPlaceFragment,
+                        AboutPlaceFragment::class.java.simpleName
+                    )
+                    addToBackStack(null)
+                    commit()
+                }
+            }
+
+            btnSeeReview.setOnClickListener {
+                val reviewsPlaceFragment = ReviewsPlaceFragment()
+                fragmentManager.beginTransaction().apply {
+                    replace(
+                        R.id.fragment_container,
+                        reviewsPlaceFragment,
+                        ReviewsPlaceFragment::class.java.simpleName
+                    )
+                    addToBackStack(null)
+                    commit()
+                }
             }
         }
+
+
     }
 
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:padding="15dp"
     tools:context=".ui.detail_place.DetailPlaceFragment">
 
@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:text="@string/dummy_text"
         android:textSize="16sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,6 +38,7 @@
         android:text="@string/star"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace" />
 
@@ -49,16 +51,19 @@
         android:text="@string/reviews"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace" />
 
     <TextView
+        android:id="@+id/btnSeeReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/see_reviews"
         android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="?android:textColorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace" />
 
@@ -73,6 +78,7 @@
         android:textColor="@color/white"
         app:backgroundTint="@color/blue"
         app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -81,14 +87,14 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
         android:alpha="1"
         android:text="@string/view_map"
         android:textColor="@color/white"
         app:backgroundTint="@color/orange"
         app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSeeReview" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
