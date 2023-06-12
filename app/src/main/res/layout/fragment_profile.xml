@@ -51,8 +51,7 @@
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="TODO"
-            android:src="@drawable/ic_baseline_edit_24"
-            app:tint="@color/blue_500"
+            android:src="@drawable/ic_edit"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
