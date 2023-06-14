@@ -37,7 +37,9 @@
     <string name="search">Search</string>
     <string name="maps">Maps</string>
     <string name="profile">Profile</string>
+    <string name="address">Address</string>
 
+    <string name="search_map">Search Location...</string>
     <string name="search_hint">Search…</string>
 
     <string name="register">Create Here</string>
