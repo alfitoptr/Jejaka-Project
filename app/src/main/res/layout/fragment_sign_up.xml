@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:alpha="1"
         android:text="@string/sign_up"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="?android:textColorPrimary"
         android:layout_marginTop="80dp"

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_review"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:text="@string/name_dummy"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -48,15 +48,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="@string/no_review"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_star_blank"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,8 +65,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="5dp"
         android:src="@drawable/ic_star_blank"
@@ -75,8 +75,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:src="@drawable/ic_star_blank"
@@ -85,8 +85,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:src="@drawable/ic_star_blank"
@@ -95,8 +95,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="5dp"
         android:src="@drawable/ic_star_blank"
@@ -108,18 +108,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:lines="4"
+        android:textSize="14sp"
+        android:lineSpacingMultiplier="@integer/material_motion_duration_medium_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAddReview"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:alpha="1"
         android:text="@string/add_review"
         android:textColor="@color/white"
+        android:textSize="14sp"
         app:backgroundTint="@color/blue"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"

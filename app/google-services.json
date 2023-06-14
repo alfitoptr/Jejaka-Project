@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "361461912011",
+    "project_id": "direct-hope-387806",
+    "storage_bucket": "direct-hope-387806.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361461912011:android:62460a54d5d8a69189a64e",
+        "android_client_info": {
+          "package_name": "com.jejaka.jejaka_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361461912011-5p50e6iq5rev24t10icn3ojiphkhfmgs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jejaka.jejaka_app",
+            "certificate_hash": "8f6c91d4dd9ef2ff88ba8065d5c2e2fead7806df"
+          }
+        },
+        {
+          "client_id": "361461912011-jssk3960i38at1pknd84f675kfi7ms54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA9-qwS-aA5Ccke3--qIeOtemvrtXgBtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361461912011-jssk3960i38at1pknd84f675kfi7ms54.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

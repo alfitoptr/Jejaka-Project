@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/about_place"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,17 +20,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace" />
+
+    <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:text="@string/dummy_text"
-        android:textSize="16sp"
-        android:textStyle="normal"
         android:textColor="?android:textColorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
         tools:layout_editor_absoluteX="15dp" />
 
     <TextView
@@ -39,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/category"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -48,7 +62,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btnCulture"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,8 +70,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:src="@drawable/ic_book"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -71,7 +85,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/culture"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/blue"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -82,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/detail_culture"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="?android:textColorPrimary"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -102,7 +116,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btnEmergency"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,8 +124,8 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:src="@drawable/emergency"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -126,7 +140,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/emergency"
             android:textColor="@color/blue"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="parent" />
@@ -136,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/detail_emergency"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="?android:textColorPrimary"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -156,11 +170,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAddReview"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:alpha="1"
         android:text="@string/add_review"
         android:textColor="@color/white"
+        android:textSize="14sp"
         app:backgroundTint="@color/blue"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"

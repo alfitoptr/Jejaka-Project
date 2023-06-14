@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:alpha="1"
         android:text="@string/sign_in"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="?android:textColorPrimary"
         android:layout_marginTop="80dp"
@@ -99,7 +99,7 @@
         android:layout_marginTop="30dp"
         android:alpha="1"
         android:text="@string/continue_with"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,22 +124,6 @@
         app:layout_constraintVertical_bias="0.035" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_login_fb"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:alpha="1"
-        app:backgroundTint="@color/facebook"
-        android:text="@string/login_fb"
-        android:textColor="@color/white"
-        app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login_google"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -150,8 +134,8 @@
         android:text="@string/sign_in"
         android:textSize="15sp"
         app:cornerRadius="20dp"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/yellow"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -164,11 +148,11 @@
         android:layout_marginTop="20dp"
         android:alpha="1"
         android:text="@string/no_account"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login_fb"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_google"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -180,13 +164,13 @@
         android:alpha="1"
         android:text="@string/register"
         android:textColor="@color/blue_700"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/tv_no_acc"
-        app:layout_constraintTop_toBottomOf="@id/btn_login_fb"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_google"
         app:layout_constraintVertical_bias="0.004" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

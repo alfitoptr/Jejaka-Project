@@ -16,22 +16,27 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.jejaka.jejaka_app.R
+import com.jejaka.jejaka_app.databinding.FragmentMapsBinding
+import com.jejaka.jejaka_app.databinding.FragmentProfileBinding
 
 class MapsFragment : Fragment() {
 
-    private val callback = OnMapReadyCallback { googleMap ->
-        /*val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))*/
+    private var _binding: FragmentMapsBinding? = null
+    private val binding get() = _binding!!
 
-        val dicodingSpace = LatLng(-6.8957643, 107.6338462)
-        googleMap.addMarker(
-            MarkerOptions()
-                .position(dicodingSpace)
-                .title("Dicoding Space")
-                .snippet("Batik Kumeli No.50")
-        )
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dicodingSpace, 15f))
+    private val callback = OnMapReadyCallback { googleMap ->
+        val sydney = LatLng(-34.0, 151.0)
+        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+
+//        val dicodingSpace = LatLng(-6.8957643, 107.6338462)
+//        googleMap.addMarker(
+//            MarkerOptions()
+//                .position(dicodingSpace)
+//                .title("Dicoding Space")
+//                .snippet("Batik Kumeli No.50")
+//        )
+//        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(dicodingSpace, 15f))
     }
 
     override fun onCreateView(
@@ -39,7 +44,8 @@ class MapsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_maps, container, false)
+        _binding = FragmentMapsBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

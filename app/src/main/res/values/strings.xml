@@ -3,6 +3,7 @@
     <string name="app_name2">Jelajah Ke Indonesia</string>
 
     <string name="activity_detail_place">Detail Place Activity</string>
+    <string name="activity_main">Main Activity</string>
 
     <string name="name">Name</string>
 
@@ -80,9 +81,16 @@
     <string name="police">Police</string>
     <string name="fire_dept">Fire Dept.</string>
     <string name="hotel">Hotel</string>
-    <string name="airport">Airport</string>
+    <string name="vacation">Vacation</string>
     <string name="restaurant">Restaurant</string>
     <string name="rail_station">Rail Station</string>
     <string name="weather">Weather</string>
+    <string name="preferred_place">Choose a Preferred Place</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+
+    <!--    Sign In With Google-->
+    <string name="defaultweb_client_id">361461912011-jssk3960i38at1pknd84f675kfi7ms54.apps.googleusercontent.com</string>
+
 
 </resources>
