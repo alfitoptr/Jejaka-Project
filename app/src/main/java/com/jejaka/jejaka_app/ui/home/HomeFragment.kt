@@ -17,6 +17,7 @@ import com.jejaka.jejaka_app.databinding.FragmentHomeBinding
 import com.jejaka.jejaka_app.ui.auth.AuthActivity
 import com.jejaka.jejaka_app.ui.detail_place.AddReviewFragment
 import com.jejaka.jejaka_app.ui.emergency.EmergencyActivity
+import com.jejaka.jejaka_app.ui.maps.MapsActivity
 
 class HomeFragment : Fragment() {
 
@@ -64,6 +65,13 @@ class HomeFragment : Fragment() {
                 startActivity(
                     Intent(
                         activity, RestaurantActivity::class.java
+                    )
+                )
+            }
+            btnMap.setOnClickListener {
+                startActivity(
+                    Intent(
+                        activity, MapsActivity::class.java
                     )
                 )
             }

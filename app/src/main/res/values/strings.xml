@@ -93,6 +93,7 @@
 
     <!--    Sign In With Google-->
     <string name="defaultweb_client_id">361461912011-jssk3960i38at1pknd84f675kfi7ms54.apps.googleusercontent.com</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>
