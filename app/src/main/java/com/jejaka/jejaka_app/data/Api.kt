@@ -28,22 +28,101 @@ data class DataPlaceRequest(
     val new_store: Int
 )
 
+data class DataRecommendPlaceRequest(
+    val user_id: String,
+    val city: String
+)
+
+data class DataEmergencyPlaceRequest(
+    val lat: Float,
+    val lon: Float,
+    val k: Int
+)
+
 interface ApiService {
 
     @POST("/predict-restaurant")
-    fun dataPlace(
+    fun getPlaceRestaurant(
         @Body request: DataPlaceRequest
     ): Call<DataPlaceResponse>
+
+    @POST("/recommend-tourism")
+    fun getRecommendTourism(
+        @Body request: DataRecommendPlaceRequest
+    ): Call<RecommendPlaceResponse>
+
+    @POST("/recommend-restaurant")
+    fun getRecommendRestaurant(
+        @Body request: DataRecommendPlaceRequest
+    ): Call<RecommendPlaceResponse>
+
+    @POST("/recommend-hotel")
+    fun getRecommendHotel(
+        @Body request: DataRecommendPlaceRequest
+    ): Call<RecommendPlaceResponse>
+
+    @POST("/recommend-emergency")
+    fun getEmergency(
+        @Body request: DataEmergencyPlaceRequest
+    ): Call<EmergencyResponse>
 
 }
 
 class ApiConfig {
-    fun getApiService(): ApiService {
+    fun getApiServiceRestaurant(): ApiService {
         val client = OkHttpClient.Builder()
             .addInterceptor(HeaderInterceptor())
             .build()
         val retrofit = Retrofit.Builder()
             .baseUrl("https://getpredictrestaurant-5dwnbiqvcq-et.a.run.app")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        return retrofit.create(ApiService::class.java)
+    }
+
+    fun getApiServiceRecTourism(): ApiService {
+        val client = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://getrecommendtourism-5dwnbiqvcq-et.a.run.app")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        return retrofit.create(ApiService::class.java)
+    }
+
+    fun getApiServiceRecHotel(): ApiService {
+        val client = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://getrecommendhotel-5dwnbiqvcq-et.a.run.app")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        return retrofit.create(ApiService::class.java)
+    }
+
+    fun getApiServiceRecRestaurant(): ApiService {
+        val client = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://getrecommendrestaurant-5dwnbiqvcq-et.a.run.app")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+        return retrofit.create(ApiService::class.java)
+    }
+
+    fun getApiServiceEmergency(): ApiService {
+        val client = OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
+            .build()
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://getrecommendemergency-5dwnbiqvcq-et.a.run.app")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

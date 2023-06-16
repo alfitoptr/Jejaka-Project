@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvAveReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -52,7 +52,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="?android:textColorPrimary"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/tvAveReview"
         app:layout_constraintTop_toBottomOf="@+id/tvDetailPlace" />
 
     <TextView

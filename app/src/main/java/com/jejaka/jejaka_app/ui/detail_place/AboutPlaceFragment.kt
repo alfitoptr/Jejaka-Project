@@ -27,33 +27,43 @@ class AboutPlaceFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val placeId = arguments?.getString("placeId").toString()
+        val placeName = arguments?.getString("placeName").toString()
+        val placeAddress = arguments?.getString("placeAddress").toString()
+        val desc = arguments?.getString("desc").toString()
+        val aveRating = arguments?.getString("aveRating").toString()
+
+
         val fragmentManager = parentFragmentManager
 
-        binding.btnEmergency.setOnClickListener {
-            val intent = Intent(activity, EmergencyActivity::class.java)
-            startActivity(intent)
+        binding.apply {
+            btnAddReview.setOnClickListener{
+                val addReviewFragment = AddReviewFragment()
+                fragmentManager.beginTransaction().apply {
+                    replace(R.id.fragment_container, addReviewFragment, AddReviewFragment::class.java.simpleName)
+                    addToBackStack(null)
+                    commit()
+                }
+            }
+
+            tvAddress.text = placeAddress
+            tvDescription.text = desc
         }
 
-        binding.btnAddReview.setOnClickListener{
-            val addReviewFragment = AddReviewFragment()
-            fragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, addReviewFragment, AddReviewFragment::class.java.simpleName)
-                addToBackStack(null)
-                commit()
-            }
-        }
-
-        binding.btnCulture.setOnClickListener{
-            val culturePlaceFragment = CulturePlaceFragment()
-            fragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, culturePlaceFragment, CulturePlaceFragment::class.java.simpleName)
-                addToBackStack(null)
-                commit()
-            }
-        }
     }
 
     companion object {
-
+        fun newInstance(placeId: String, placeName: String, placeAddress: String, desc: String, aveRating: String): AboutPlaceFragment {
+            val fragment = AboutPlaceFragment()
+            val args = Bundle()
+            args.putString("placeId", placeId)
+            args.putString("placeName", placeName)
+            args.putString("placeAddress", placeAddress)
+            args.putString("desc", desc)
+            args.putString("aveRating", aveRating)
+            fragment.arguments = args
+            return fragment
+        }
     }
+
 }

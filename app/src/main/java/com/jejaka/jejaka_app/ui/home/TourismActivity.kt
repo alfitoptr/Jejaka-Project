@@ -1,57 +1,46 @@
-package com.jejaka.jejaka_app.ui.search
+package com.jejaka.jejaka_app.ui.home
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.ListView
-import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.jejaka.jejaka_app.R
 import com.jejaka.jejaka_app.data.RecommendPlacesItem
-import com.jejaka.jejaka_app.databinding.FragmentSearchBinding
+import com.jejaka.jejaka_app.databinding.ActivityTourismBinding
 import com.jejaka.jejaka_app.ui.detail_place.DetailPlaceActivity
-import com.jejaka.jejaka_app.ui.home.CardAdapter
-import com.jejaka.jejaka_app.ui.home.CardHorizontalAdapter
 
-class SearchFragment : Fragment() {
+class TourismActivity : AppCompatActivity() {
 
-    private var _binding: FragmentSearchBinding? = null
-    // This property is only valid between onCreateView and onDestroyView.
+    private var _binding: ActivityTourismBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var searchViewModel : SearchViewModel
+    private lateinit var homeViewModel : HomeViewModel
 
     private val listDataPlace = ArrayList<RecommendPlacesItem>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentSearchBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        _binding = ActivityTourismBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
-        searchViewModel = ViewModelProvider(this)[SearchViewModel::class.java]
+        supportActionBar?.hide()
 
-        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        binding.rvSearch.layoutManager = layoutManager
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.rvTourism.layoutManager = layoutManager
 
-        searchViewModel.listPlaceTourism.observe(viewLifecycleOwner){
+        homeViewModel.listPlaceTourism.observe(this){
             setListPlace(it)
         }
 
-        searchViewModel.isLoading.observe(viewLifecycleOwner){
+        homeViewModel.isLoading.observe(this){
             showLoading(it)
         }
 
-        searchViewModel.getRecommendTourism(
+        homeViewModel.getRecommendTourism(
             "sksssaw", "Jakarta"
         )
     }
@@ -78,7 +67,7 @@ class SearchFragment : Fragment() {
 
     private fun showRecyclerList() {
         val adapter = CardAdapter(listDataPlace)
-        binding.rvSearch.adapter = adapter
+        binding.rvTourism.adapter = adapter
 
         adapter.setOnItemClickCallBack(object : CardAdapter.OnItemClickCallback{
             override fun onItemClicked(data: RecommendPlacesItem) {
@@ -89,23 +78,19 @@ class SearchFragment : Fragment() {
                 val desc = data.desc
                 val aveRating = data.aveRating.toString()
 
-                val intent = Intent(requireContext(), DetailPlaceActivity::class.java)
+                val intent = Intent(this@TourismActivity, DetailPlaceActivity::class.java)
                 intent.putExtra("placeId", placeId)
                 intent.putExtra("placeName", placeName)
                 intent.putExtra("placeAddress", placeAddress)
                 intent.putExtra("desc", desc)
                 intent.putExtra("aveRating", aveRating)
                 startActivity(intent)
+
             }
         })
     }
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

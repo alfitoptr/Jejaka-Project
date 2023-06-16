@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.jejaka.jejaka_app.R
 import com.jejaka.jejaka_app.databinding.FragmentSignUpBinding
 
@@ -14,6 +17,8 @@ class SignUpFragment : Fragment() {
 
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +37,17 @@ class SignUpFragment : Fragment() {
         passwordFocusListener()
         passwordConfirmFocusListener()
 
-        binding.btnSignup.setOnClickListener { submitForm() }
+        auth = FirebaseAuth.getInstance()
+
+        binding.btnSignup.setOnClickListener {
+
+        }
+    }
+
+    private fun validateInputs(email: String, password: String): Boolean {
+        // Perform your own validation for email and password fields
+        // Return true if the inputs are valid; otherwise, show an error and return false
+        return true
     }
 
     private fun submitForm()

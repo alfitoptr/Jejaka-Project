@@ -7,14 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.jejaka.jejaka_app.databinding.FragmentProfileBinding
 import com.jejaka.jejaka_app.ui.auth.AuthActivity
-import com.jejaka.jejaka_app.ui.detail_place.DetailPlaceActivity
 
 class ProfileFragment : Fragment() {
 
@@ -33,16 +30,6 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val profileViewModel =  ViewModelProvider(this).get(ProfileViewModel::class.java)
-
-        profileViewModel.text.observe(viewLifecycleOwner) {
-        }
-
-        binding.btnHelp.setOnClickListener {
-            startActivity(
-                Intent(
-                    activity, DetailPlaceActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
-        }
 
         binding.btnLogout.setOnClickListener {
             Firebase.auth.signOut()

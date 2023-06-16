@@ -83,7 +83,7 @@
     <string name="police">Police</string>
     <string name="fire_dept">Fire Dept.</string>
     <string name="hotel">Hotel</string>
-    <string name="vacation">Vacation</string>
+    <string name="tourism">Tourism</string>
     <string name="restaurant">Restaurant</string>
     <string name="rail_station">Rail Station</string>
     <string name="weather">Weather</string>
@@ -94,6 +94,7 @@
     <!--    Sign In With Google-->
     <string name="defaultweb_client_id">361461912011-jssk3960i38at1pknd84f675kfi7ms54.apps.googleusercontent.com</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="recommend_tourism">Recommend Tourism</string>
 
 
 </resources>

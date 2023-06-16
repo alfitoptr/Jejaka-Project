@@ -18,12 +18,6 @@
         tools:layout="@layout/fragment_search" />
 
     <fragment
-        android:id="@+id/ic_map"
-        android:name="com.jejaka.jejaka_app.ui.maps.MapsFragment"
-        android:label="@string/search"
-        tools:layout="@layout/fragment_maps" />
-
-    <fragment
         android:id="@+id/ic_person"
         android:name="com.jejaka.jejaka_app.ui.profile.ProfileFragment"
         android:label="@string/profile"

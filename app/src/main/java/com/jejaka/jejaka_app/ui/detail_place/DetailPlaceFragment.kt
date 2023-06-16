@@ -25,11 +25,18 @@ class DetailPlaceFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val placeId = arguments?.getString("placeId").toString()
+        val placeName = arguments?.getString("placeName").toString()
+        val placeAddress = arguments?.getString("placeAddress").toString()
+        val desc = arguments?.getString("desc").toString()
+        val aveRating = arguments?.getString("aveRating").toString()
+
+
         val fragmentManager = parentFragmentManager
 
         binding.apply {
             btnMoreInfo.setOnClickListener {
-                val aboutPlaceFragment = AboutPlaceFragment()
+                val aboutPlaceFragment = AboutPlaceFragment.newInstance(placeId, placeName, placeAddress, desc, aveRating)
                 fragmentManager.beginTransaction().apply {
                     replace(
                         R.id.fragment_container,
@@ -40,6 +47,7 @@ class DetailPlaceFragment : Fragment() {
                     commit()
                 }
             }
+
 
             btnSeeReview.setOnClickListener {
                 val reviewsPlaceFragment = ReviewsPlaceFragment()
@@ -55,7 +63,23 @@ class DetailPlaceFragment : Fragment() {
             }
         }
 
-
+        binding.tvDetailPlace.text = desc
+        binding.tvAveReview.text = aveRating
     }
+
+    companion object {
+        fun newInstance(placeId: String, placeName: String, placeAddress: String, desc: String, aveRating: String): DetailPlaceFragment {
+            val fragment = DetailPlaceFragment()
+            val args = Bundle()
+            args.putString("placeId", placeId)
+            args.putString("placeName", placeName)
+            args.putString("placeAddress", placeAddress)
+            args.putString("desc", desc)
+            args.putString("aveRating", aveRating)
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
 
 }

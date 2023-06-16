@@ -8,11 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProvider
-import com.google.gson.annotations.SerializedName
 import com.jejaka.jejaka_app.MainActivity
-import com.jejaka.jejaka_app.data.CategoryViewModel
 import com.jejaka.jejaka_app.data.PlacesItem
 import com.jejaka.jejaka_app.databinding.FragmentCategoryBinding
 
@@ -57,6 +54,7 @@ class CategoryFragment : Fragment() {
         )
     }
 
+    // Handle to not back to previously fragment
     override fun onAttach(context: Context) {
         super.onAttach(context)
         val callback = object : OnBackPressedCallback(true) {

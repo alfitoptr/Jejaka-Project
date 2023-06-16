@@ -103,12 +103,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     CoroutineScope(Dispatchers.Main).launch {
                         val address = getAddressFromLocation(lat, lon)
 
-                        val sharedPreferencesLoc = getSharedPreferences("dataLocation", Context.MODE_PRIVATE)
-                        val editor = sharedPreferencesLoc.edit()
-                        editor.putString("lat", lat.toString())
-                        editor.putString("lon", lon.toString())
-                        editor.putString("city", address)
-                        editor.apply()
                         // Use the address as needed
                         Log.d("Location", "City: $address")
                     }
