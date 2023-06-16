@@ -1,15 +1,103 @@
 <resources>
-    <string name="app_name">JeJaKa</string>
-    <string name="name">Name</string>
+    <string name="app_name">JEJAKa</string>
+    <string name="app_name2">Jelajah Ke Indonesia</string>
+
+    <string name="activity_detail_place">Activity Detail Lokasi</string>
+    <string name="activity_main">Activity Utama</string>
+
+    <string name="name">Nama</string>
+
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="required">Required</string>
+    <string name="password">Kata Sandi</string>
+    <string name="name_hint">Masukkan nama</string>
+    <string name="email_hint">Masukkan alamat e-mail</string>
+    <string name="password_hint">Masukkan kata sandi</string>
+    <string name="password_confirm_hint">Konfirmasi kata sandi</string>
 
-    <string name="input_invalid">Input Invalid</string>
-    <string name="no_account">Don\'t have account yet?</string>
+    <string name="name_dummy">Tim Jejaka</string>
+    <string name="email_address">Alamat email</string>
+    <string name="email_dummy">jejaka.team@bangkit.com</string>
+    <string name="password_dummy">********</string>
+    <string name="change">Ubah</string>
+    <string name="phone">Telefon</string>
+    <string name="phone_dummy">+62 8123 456 789</string>
+    <string name="favorite">Tempat Favorite</string>
+    <string name="help">Tentang Kami</string>
+    <string name="save_setting">Simpan Pengaturan</string>
 
-    <string name="desc_icon">Jejaka App\'s Icon Logo</string>
+    <string name="sign_in">Masuk</string>
+    <string name="sign_up">Daftar</string>
+    <string name="sign_out">Keluar</string>
+    <string name="login">Masuk</string>
+    <string name="continue_with">atau masuk dengan</string>
+    <string name="login_google">Masuk Dengan Google</string>
+
+    <string name="home">Home</string>
+    <string name="search">Cari</string>
+    <string name="maps">Peta</string>
+    <string name="profile">Profil</string>
+    <string name="address">Alamat</string>
+    <string name="about">Tentang JEJAKA</string>
+    <string name="about_sub">Perjalanan yang disesuaikan denganmu, dalam genggaman aplikasi.</string>
+    <string name="about_desc">JEJAKa adalah aplikasi mobile yang dirancang untuk meningkatkan pengalaman perjalanan Anda.</string>
+    <string name="about_desc2">Aplikasi ini menawarkan berbagai fitur untuk membantu Anda selama perencanaan dan pelaksanaan perjalanan.</string>
+
+    <string name="search_map">Cari Lokasi…</string>
+    <string name="search_hint">Cari sesuatu…</string>
+
+    <string name="register">Daftar Di Sini</string>
+    <string name="required">Wajib Diisi</string>
+
+    <string name="input_invalid">Input Tidak Valid</string>
+    <string name="no_account">Belum memiliki akun?</string>
+    <string name="have_account">Sudah memiliki akun?</string>
+
+    <string name="popular_nearby">Populer Terdekat</string>
+    <string name="popular_location">Lokasi Populer</string>
+
+    <string name="place_name">Nama Lokasi</string>
+    <string name="rating">Penilaian</string>
+
+    <string name="desc_icon">Logo Aplikasi Jejaka</string>
+    <string name="desc_place">Foto lokasi Jejaka</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Fragmen Kosong</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifikasi</string>
+
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</string>
+    <string name="star">4.5</string>
+    <string name="number_of_reviews">(100 Ulasan)</string>
+    <string name="see_reviews">Lihat Ulasan</string>
+    <string name="more_info">Info Lainnya</string>
+    <string name="view_map">Lihat Peta</string>
+    <string name="about_place">Tentang Lokasi</string>
+    <string name="category">Kategori</string>
+    <string name="culture">Budaya</string>
+    <string name="detail_culture">Makanan tradisional, bahasa &amp; lainnya</string>
+    <string name="emergency">Darurat</string>
+    <string name="detail_emergency">Semua kontak darurat lokal</string>
+    <string name="add_review">Tambah Ulasan</string>
+    <string name="reviews">Ulasan</string>
+    <string name="no_review">Tidak ada ulasan</string>
+    <string name="hospital">Rumah Sakit / Ambulans</string>
+    <string name="police">Polisi</string>
+    <string name="fire_dept">Pemadam Kebakaran</string>
+    <string name="hotel">Hotel</string>
+    <string name="tourism">Pariwisata</string>
+    <string name="restaurant">Tempat Makan</string>
+    <string name="rail_station">Stasiun</string>
+    <string name="weather">Cuaca</string>
+    <string name="preferred_place">Pilih tempat yang disukai</string>
+    <string name="skip">Lewati</string>
+    <string name="next">Lanjut</string>
+
+    <!--    Sign In With Google-->
+    <string name="defaultweb_client_id">361461912011-jssk3960i38at1pknd84f675kfi7ms54.apps.googleusercontent.com</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="recommend_tourism">Rekomendasi Lokasi</string>
+
 
 </resources>

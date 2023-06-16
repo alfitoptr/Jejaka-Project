@@ -8,4 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFC93C</color>
+    <color name="gray">#e0e1dd</color>
+    <color name="gray_2">#343a40</color>
+    <color name="blue">#1746A2</color>
+    <color name="orange">#FF731D</color>
+
+    <color name="google">#CA3A3A</color>
+    <color name="facebook">#3B5896</color>
 </resources>
