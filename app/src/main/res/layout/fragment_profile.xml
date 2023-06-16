@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linear_profile" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_help"
+        android:id="@+id/btnAbout"
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:text="@string/help"
@@ -146,6 +146,6 @@
         app:icon="@drawable/ic_baseline_logout_24"
         app:iconPadding="20dp"
         app:iconTint="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/btn_help" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAbout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

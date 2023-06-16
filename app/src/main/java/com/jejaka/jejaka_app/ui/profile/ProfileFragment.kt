@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.jejaka.jejaka_app.databinding.FragmentProfileBinding
+import com.jejaka.jejaka_app.ui.about.AboutActivity
 import com.jejaka.jejaka_app.ui.auth.AuthActivity
 
 class ProfileFragment : Fragment() {
@@ -40,6 +41,13 @@ class ProfileFragment : Fragment() {
                 )
             )
             activity?.finish()
+        }
+        binding.btnAbout.setOnClickListener {
+            startActivity(
+                Intent(
+                    activity, AboutActivity::class.java
+                )
+            )
         }
 
         val sharedPreferences = context?.getSharedPreferences("LoginSession", Context.MODE_PRIVATE)
