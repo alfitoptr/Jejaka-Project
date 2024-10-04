@@ -36,21 +36,21 @@ The **Jejaka** application is crafted to provide a **seamless and efficient user
 ### Machine Learning
 The **Machine Learning** branch of the project is focused on building a **tourist attraction recommendation system** using a **Content-Based Filtering** model. The data used in this model is collected by scraping locations and details using the **Google Places API**.
 
-For more details, visit the [Machine Learning repository](#).
+Visit the [Machine Learning branch](https://github.com/alfitoptr/Jejaka-Project/tree/Machine-Learning).
 
 ---
 
 ### Mobile Development
 The **Mobile Development** team designed and implemented the user interface for the **Jejaka** application. The app is built with the goal of ensuring ease of use, with concise information and smooth navigation for users looking for tourist destinations.
 
-For more details, visit the [Mobile Development repository](#).
+Visit the [Mobile Development branch](https://github.com/alfitoptr/Jejaka-Project/tree/Mobile-Development).
 
 ---
 
 ### Cloud Computing
 The **Cloud Computing** team handled the backend services, ensuring scalability and fast response times. They implemented cloud-based solutions to manage large amounts of data and support seamless user requests.
 
-For more details, visit the [Cloud Computing repository](#).
+Visit the [Cloud Computing branch](https://github.com/alfitoptr/Jejaka-Project/tree/Cloud-Computing).
 
 ---
 
